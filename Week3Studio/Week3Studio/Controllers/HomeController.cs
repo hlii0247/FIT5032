@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Week3Studio.Models.Hello_World;
 
 namespace Week3Studio.Controllers
 {
@@ -15,7 +16,8 @@ namespace Week3Studio.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            Hello hello = new Hello();
+            ViewBag.Message = hello.GetHello();
 
             return View();
         }
